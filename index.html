@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#080a12">
+  <title>NOVA — The Internet From 2057</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="browser-shell" aria-label="NOVA browser">
+    <header class="browser-topbar">
+      <div class="window-controls" aria-hidden="true">
+        <span class="control control-close"></span>
+        <span class="control control-minimize"></span>
+        <span class="control control-expand"></span>
+      </div>
+      <div class="tab-strip">
+        <div class="browser-tab active">
+          <span class="tab-favicon">N</span>
+          <span id="tabTitle">New pulse</span>
+          <button class="tab-close" aria-label="Close tab">×</button>
+        </div>
+        <button class="new-tab" aria-label="New tab">+</button>
+      </div>
+      <div class="signal" title="Lunar relay connected"><span></span> LUNA-9</div>
+    </header>
+
+    <div class="navigation-bar">
+      <div class="navigation-controls">
+        <button id="backButton" class="icon-button" aria-label="Back" disabled>←</button>
+        <button id="forwardButton" class="icon-button" aria-label="Forward" disabled>→</button>
+        <button id="refreshButton" class="icon-button" aria-label="Refresh">↻</button>
+      </div>
+      <form id="addressForm" class="address-wrap">
+        <span class="secure-dot"></span>
+        <input id="addressBar" aria-label="Address and search" autocomplete="off" spellcheck="false" value="nova://new-pulse">
+        <span class="quantum-badge">Q</span>
+      </form>
+      <button id="identityButton" class="identity-button" aria-label="Open identity menu">NA</button>
+    </div>
+
+    <section id="browserViewport" class="browser-viewport" aria-live="polite"></section>
+
+    <nav class="dock" aria-label="Favorite sites">
+      <button data-route="home" title="NOVA home"><span>✦</span><small>Home</small></button>
+      <button data-route="pulse" title="Pulse News"><span>◉</span><small>Pulse</small></button>
+      <button data-route="orbit" title="Orbit Social"><span>◎</span><small>Orbit</small></button>
+      <button data-route="shop" title="Morrow Market"><span>◇</span><small>Morrow</small></button>
+      <button data-route="archive" title="Memory Archive"><span>⌁</span><small>Archive</small></button>
+    </nav>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
